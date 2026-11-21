@@ -1,6 +1,6 @@
 {
   "name": "writing-vocabulary",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
   "author": {
     "name": "Hang Yu",

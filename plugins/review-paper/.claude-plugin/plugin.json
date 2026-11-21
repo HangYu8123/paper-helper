@@ -1,6 +1,6 @@
 {
   "name": "review-paper",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Peer reviews of others' papers in Hang Yu's reviewing style, on a review page with the evidence under each point and buttons to accept, edit, or reject it. Also proposes edits to a manuscript's text on the editing page when asked.",
   "author": {
     "name": "Hang Yu",

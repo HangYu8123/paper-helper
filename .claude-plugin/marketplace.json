@@ -12,7 +12,7 @@
       "name": "polish-paper",
       "source": "./plugins/polish-paper",
       "description": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "productivity",
       "keywords": [
         "paper review",
@@ -27,7 +27,7 @@
       "name": "review-paper",
       "source": "./plugins/review-paper",
       "description": "Peer reviews of others' papers in Hang Yu's reviewing style, on a review page with the evidence under each point and buttons to accept, edit, or reject it. Also proposes edits to a manuscript's text on the editing page when asked.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "productivity",
       "keywords": [
         "peer review",
@@ -57,7 +57,7 @@
       "name": "writing-vocabulary",
       "source": "./plugins/writing-vocabulary",
       "description": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "productivity",
       "keywords": [
         "vocabulary",
@@ -71,7 +71,7 @@
       "name": "writing-style",
       "source": "./plugins/writing-style",
       "description": "Hang Yu's writing style: 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, entered through a short quick reference, and the committee writing style reference. polish-paper and review-paper use it for the wording of every proposal and review. It uses writing-vocabulary for technical terms when that plugin is installed, and works without it.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "productivity",
       "keywords": [
         "writing style",

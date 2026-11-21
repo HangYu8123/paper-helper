@@ -1,6 +1,6 @@
 {
   "name": "writing-style",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Hang Yu's writing style: 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, entered through a short quick reference, and the committee writing style reference. polish-paper and review-paper use it for the wording of every proposal and review. It uses writing-vocabulary for technical terms when that plugin is installed, and works without it.",
   "author": {
     "name": "Hang Yu",

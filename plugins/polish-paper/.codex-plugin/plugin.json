@@ -1,6 +1,6 @@
 {
   "name": "polish-paper",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report.",
   "author": {
     "name": "Hang Yu",
