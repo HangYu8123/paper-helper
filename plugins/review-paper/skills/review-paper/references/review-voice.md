@@ -1,6 +1,6 @@
 # Hang's reviewing voice
 
-Use a restrained, professional register in plain English. Follow Hang's current instructions first, then the facts and definitions, then explicit past edits and decisions, then [guideline.md](guideline.md) and the portable writing style guide (`writing-style-guide.md` in the `writing-style-portable` skill). The raw reviews and the older full reference in the `writing-style` skill (`writing_style_ref/`) supply examples rather than a requirement to repeat their phrasing.
+Use a restrained, professional register in plain English. Follow Hang's current instructions first, then the facts and definitions, then explicit past edits and decisions, then [guideline.md](guideline.md) and Hang's writing style reference (`writing_style_ref/hangs-writing-style-reference.md` in the `writing-style` skill). The raw reviews and the quoted examples in that reference supply examples rather than a requirement to repeat their phrasing.
 
 ## Voice and tone
 
@@ -31,7 +31,7 @@ These are examples of sentence form. Use them only when the current paper suppor
 
 ## Sentence rules
 
-Read the portable guide's Core philosophy and Quick reference before drafting, and consult its sections on claims, sentence style, and editing while revising. When the `writing-vocabulary` skill is installed, use its `vocabulary.md` for unfamiliar wording. The following rules are the ones most often needed in reviews.
+Read the opening and Quick reference of Hang's writing style reference before drafting, and consult its Wording preference, Sentence style, and Sentence structure patterns while revising. When the `writing-vocabulary` skill is installed, use its `vocabulary.md` for unfamiliar wording. The following rules are the ones most often needed in reviews.
 
 1. Name the actor and use a concrete verb. Keep the paper's defined names for methods, metrics, and datasets.
 2. Give each sentence one main job. Keep a governing condition with its claim and a result with its interpreting clause.

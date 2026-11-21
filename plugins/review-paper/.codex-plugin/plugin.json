@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "Review Paper",
     "shortDescription": "Draft a peer review in Hang's reviewing style",
-    "longDescription": "Peer reviews of others' papers in Hang Yu's reviewing style, on a review page with the evidence under each point and buttons to accept, edit, or reject it. Also proposes edits to a manuscript's text on the editing page when asked. It needs the writing-style-portable and html-templates plugins from the same marketplace.",
+    "longDescription": "Peer reviews of others' papers in Hang Yu's reviewing style, on a review page with the evidence under each point and buttons to accept, edit, or reject it. Also proposes edits to a manuscript's text on the editing page when asked. It needs the writing-style and html-templates plugins from the same marketplace.",
     "developerName": "Hang Yu",
     "category": "Education & Research",
     "capabilities": [

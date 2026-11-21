@@ -16,7 +16,7 @@
     "robotics"
   ],
   "dependencies": [
-    "writing-style-portable",
+    "writing-style",
     "html-templates"
   ]
 }

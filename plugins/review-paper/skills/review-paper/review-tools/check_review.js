@@ -35,7 +35,7 @@ const EXPLAINS = /\b(?:(?:likely|probably|presumably|possibly|perhaps|maybe) (?:
 // Words that ask the authors for something, or say what would resolve the concern.
 const ASKS = /\?|\b(?:please|clarify|clarification|explain|report|specify|discuss|justify|include|provide|add|compare|comparison|show|would (?:help|strengthen|be stronger|resolve|address)|it would help|should|needs? to|narrow(?:ing|ed)?)\b/i;
 
-// Wording to review in assistant drafts. The portable guide also records terms
+// Wording to review in assistant drafts. The writing-vocabulary skill also records terms
 // Hang uses, so words such as moreover and leverage are not blanket errors.
 const STYLE_WORDS = [
   /\bdelv(e|es|ed|ing)\b/i, /\bshowcas(e|es|ed|ing)\b/i, /\bpivotal\b/i,

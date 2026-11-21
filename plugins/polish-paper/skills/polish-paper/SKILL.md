@@ -1,6 +1,6 @@
 ---
 name: polish-paper
-description: Review a student's academic paper draft, especially HRI, CS, and robotics, using an advisor's paper-writing guide. Check the argument, sections, paragraphs, figures, and submission length, and propose small, evidence-based revisions on an editing page where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report on a review page. Use for paper feedback, argument tightening, section review, and submission preparation from PDF, LaTeX, Word, Markdown, or pasted text, including reviews requested by an advisor. Word revisions with the portable writing style guide. Do not apply revisions without the author's acceptance or explicit editing authorization.
+description: Review a student's academic paper draft, especially HRI, CS, and robotics, using an advisor's paper-writing guide. Check the argument, sections, paragraphs, figures, and submission length, and propose small, evidence-based revisions on an editing page where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report on a review page. Use for paper feedback, argument tightening, section review, and submission preparation from PDF, LaTeX, Word, Markdown, or pasted text, including reviews requested by an advisor. Word revisions with the writing-style skill. Do not apply revisions without the author's acceptance or explicit editing authorization.
 ---
 
 # Polish a paper
@@ -9,27 +9,26 @@ description: Review a student's academic paper draft, especially HRI, CS, and ro
 
 The user's request (in Claude Code, the text after the skill's slash command) names the paper and the review focus. If it does not, use the paper and scope already established in the conversation, and ask only for missing input.
 
-This skill runs in Claude Code and in Codex, as a plugin of its own (alone or through the `paper-helper` bundle), or installed on its own. Resolve relative paths from the folder that holds this `SKILL.md`. Use the platform's file tools to read the source and the references, and the shell for the helpers.
+This skill runs in Claude Code and in Codex, as a plugin of its own or installed as a standalone skill. Resolve relative paths from the folder that holds this `SKILL.md`. Use the platform's file tools to read the source and the references, and the shell for the helpers.
 
 It uses other skills of the same collection, shared with the `review-paper` skill and found by name as described under "Companion skills" below.
 
 | Skill | Needed | Use |
 | --- | --- | --- |
-| `writing-style-portable` | Yes | The portable writing style guide, for wording in every session |
+| `writing-style` | Yes | Hang's writing style reference, for wording in every session, and the rest of its references for the cases listed under "Writing tone and wording" |
 | `html-templates` | Yes | The editing template for proposed revisions, and the review template for a mock reviewer report |
 | `writing-vocabulary` | No | The author's vocabulary, read before proposing wording |
-| `writing-style` | No | The full style references, for the cases listed under "Writing tone and wording" |
 | `review-paper` | Installed with it | Its claim checks and helpers, for the technical audit and for PDF text |
 | `find-sota-papers` | No | The literature search, in its light mode, for findings that depend on prior work (see "When a finding needs the literature") |
 
-Below, `<writing-style-portable>`, `<html-templates>`, `<find-sota-papers>`, `<writing-vocabulary>`, and `<writing-style>` stand for the folders of these skills.
+Below, `<html-templates>`, `<find-sota-papers>`, `<writing-vocabulary>`, and `<writing-style>` stand for the folders of these skills.
 
 | Resource | Location | When to use it |
 | --- | --- | --- |
 | Advisor's guide | [references/advisor-guide.md](references/advisor-guide.md) | Every session |
-| Portable writing style guide | `<writing-style-portable>/writing-style-guide.md` | Every session, for wording |
+| Hang's writing style reference | `<writing-style>/writing_style_ref/hangs-writing-style-reference.md` | Every session, for wording: its opening and Quick reference, then entries by heading |
 | Vocabulary | `<writing-vocabulary>/vocabulary.md` | Before proposing wording, when the skill is installed |
-| Full style references | `<writing-style>/writing_style_ref/` and `<writing-style>/committee_style_ref/` | Only in the cases listed under "Writing tone and wording", when the skill is installed |
+| Review records and the committee reference | `<writing-style>/writing_style_ref/` and `<writing-style>/committee_style_ref/` | Only in the cases listed under "Writing tone and wording" |
 | Editing template | `<html-templates>/edit_template/` | Proposed revisions to a source file |
 | Review template | `<html-templates>/review_template/` | A mock reviewer report |
 | Review checker and format example | `review-tools/` | With the review template |
@@ -52,25 +51,25 @@ The advisor's full guidance is in [references/advisor-guide.md](references/advis
 
 ## Writing tone and wording
 
-The portable guide is the style source for ordinary reviews. Before proposing wording, read [references/writing-style-integration.md](references/writing-style-integration.md) and, in the portable guide (`<writing-style-portable>/writing-style-guide.md`), the Core philosophy, Which guidance wins, Quick reference, and "7. Editing someone else's text". Look up its other sections for the kind of sentence at hand. When the `writing-vocabulary` skill is installed, read its `vocabulary.md` first and use it for word choice; without it, choose terms as the guide's introduction says. Use the guide's field conventions (`<writing-style-portable>/field-conventions.md`) for the structure of a long document.
+Hang's writing style reference, in the `writing-style` skill, is the style source for ordinary reviews. Before proposing wording, read [references/writing-style-integration.md](references/writing-style-integration.md) and, in Hang's reference (`<writing-style>/writing_style_ref/hangs-writing-style-reference.md`), the opening through the Quick reference and "Correcting a sentence without rewording it". Look up its other patterns by heading for the kind of sentence at hand. When the `writing-vocabulary` skill is installed, read its `vocabulary.md` first and use it for word choice; without it, use the Vocabulary patterns of Hang's reference and the paper's own definitions. Use the committee reference (`<writing-style>/committee_style_ref/committee-writing-style-reference.md`) for the structure of a long document.
 
-The full references, in the `writing-style` skill, are large. When that skill is installed, open them only when the portable guide is not enough:
+The rest of the `writing-style` skill is large. Open it only when the opening and the patterns looked up by heading are not enough:
 
-- a sentence may have been reviewed before, or the author disputes a wording choice: Hang's full reference (`<writing-style>/writing_style_ref/hangs-writing-style-reference.md`) and its review decisions (`<writing-style>/writing_style_ref/review-decisions.md`);
-- the portable guide states a rule but you need the evidence or examples behind it to apply it to an unusual case;
+- a sentence may have been reviewed before, or the author disputes a wording choice: the review decisions (`<writing-style>/writing_style_ref/review-decisions.md`) and the record they link;
+- a pattern states a rule but you need the evidence or examples behind it to apply it to an unusual case;
 - committee-facing clarity, study reporting, or a thesis chapter: the committee reference (`<writing-style>/committee_style_ref/committee-writing-style-reference.md`);
 - the author or advisor asks for them.
 
-Search them by heading or pattern name and read only the entries you need. Do not load a whole library, evidence file, or source text. Without the `writing-style` skill, follow the portable guide and the paper's own decision records, and say so when a case needed the full references.
+Search them by heading or pattern name and read only the entries you need. Do not load a whole library, evidence file, or source text.
 
 Use the sources for different decisions:
 
 - **Review method and substance:** this workflow and the advisor's guide remain the foundation. Address the argument before mechanical wording.
-- **Everyday writing choices:** the portable guide provides direct, concrete wording, stable terms, scoped claims, and minimal edits.
+- **Everyday writing choices:** the Quick reference and patterns of Hang's reference provide direct, concrete wording, stable terms, scoped claims, and minimal edits. Its chapter, slide, and film patterns govern those genres only.
 - **Author preferences and disputed wording:** use Hang's full reference and its linked decisions to understand what was requested, changed, or declined. Do not turn a past choice about one passage into a universal substitution.
 - **Reader expectations and long documents:** use the committee reference and the field conventions as observations of published writing, not instructions from the committee about this draft. Do not impose dissertation structure or impersonal voice on a conference paper.
 
-Current user instructions and the passage's facts, data, and definitions take priority. For style conflicts, direct evidence of Hang's choices takes priority over the portable summary, then committee examples. Keep the paper's established voice unless a change is requested. Hang's own dissertation is impersonal, but field dissertations use we, so the impersonal voice is not a default for a student's paper or thesis. Preserve a different student's terminology and voice while using these sources to improve clarity.
+Current user instructions and the passage's facts, data, and definitions take priority. For style conflicts, direct evidence of Hang's choices takes priority over paper examples, then committee examples. Keep the paper's established voice unless a change is requested. Hang's own dissertation is impersonal, but field dissertations use we, so the impersonal voice is not a default for a student's paper or thesis. Preserve a different student's terminology and voice while using these sources to improve clarity.
 
 Keep quotations from the student's source exact, even when they contain wording or punctuation the style guide would change. Apply the style guidance to proposals and explanations. Keep a spelling or grammar correction separate from optional rewording and from any change of claim. Check earlier decisions before proposing the same change again.
 

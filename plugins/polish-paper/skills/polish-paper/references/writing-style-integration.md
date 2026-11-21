@@ -1,21 +1,21 @@
 # Applying the writing references to a paper review
 
-Keep the review method in [SKILL.md](../SKILL.md) and the substantive expectations in [the advisor's guide](advisor-guide.md). These remain the foundation. The style collections help choose the wording of a proposed revision and the explanation that accompanies it. The portable guide, in the `writing-style-portable` skill, covers ordinary reviews. The vocabulary, in the `writing-vocabulary` skill, covers word choice when it is installed. The two full references, in the `writing-style` skill, are large source libraries, so open them only when that skill is installed and only for the rows of the table below that name them. As in SKILL.md, `<name>` stands for the folder of the skill of that name.
+Keep the review method in [SKILL.md](../SKILL.md) and the substantive expectations in [the advisor's guide](advisor-guide.md). These remain the foundation. The style collections help choose the wording of a proposed revision and the explanation that accompanies it. Hang's writing style reference, in the `writing-style` skill, covers ordinary reviews through its opening, its Quick reference, and the patterns looked up by heading. The vocabulary, in the `writing-vocabulary` skill, covers word choice when it is installed. The rest of the `writing-style` skill (the review records, the evidence, and the committee reference) is a large source library, so open it only for the rows of the table below that name it. As in SKILL.md, `<name>` stands for the folder of the skill of that name.
 
 ## Read by purpose
 
 | Decision | Read |
 | --- | --- |
-| Ordinary tone, claim wording, minimal editing | The portable guide, `<writing-style-portable>/writing-style-guide.md`, especially Core philosophy, Quick reference, and Editing someone else's text |
-| Technical word choice and stable meanings | The vocabulary, `<writing-vocabulary>/vocabulary.md`, and `<writing-vocabulary>/vocabulary_ref/tech-vocabulary.md` for examples and sources. Without that skill, the guide's introduction on choosing terms and its Words to avoid |
-| A preference needs explanation or appears to conflict with the summary | The relevant entry in Hang's full reference, `<writing-style>/writing_style_ref/hangs-writing-style-reference.md`, then its linked evidence |
+| Ordinary tone, claim wording, minimal editing | Hang's reference, `<writing-style>/writing_style_ref/hangs-writing-style-reference.md`, especially its opening, Quick reference, and Correcting a sentence without rewording it |
+| Technical word choice and stable meanings | The vocabulary, `<writing-vocabulary>/vocabulary.md`, and `<writing-vocabulary>/vocabulary_ref/tech-vocabulary.md` for examples and sources. Without that skill, the Vocabulary patterns of Hang's reference |
+| A preference needs explanation or appears to conflict with the Quick reference | The relevant entry in Hang's reference, then its linked evidence |
 | A sentence was reviewed before | The review index, `<writing-style>/writing_style_ref/review-decisions.md`, the relevant record in `writing_style_ref/reviews/`, and the current paper's own decision record |
 | Strength or origin of a preference | `<writing-style>/writing_style_ref/preference-signals.md`; `<writing-style>/writing_style_ref/source-map.md` for how patterns were merged |
-| Committee-facing clarity, study reporting, or a long document | The relevant entry in the committee reference, `<writing-style>/committee_style_ref/committee-writing-style-reference.md`; `<writing-style-portable>/field-conventions.md` for the broader comparison |
+| Committee-facing clarity, study reporting, or a long document | The relevant entry in the committee reference, `<writing-style>/committee_style_ref/committee-writing-style-reference.md`, and its "Compared with Hang's reference" section for the broader comparison |
 | Evidence of a writing pattern | Hang's paper excerpts, `<writing-style>/writing_style_ref/source-evidence.md`, or the committee excerpts, `<writing-style>/committee_style_ref/source-evidence.md`; `<writing-style>/committee_style_ref/writer-profiles.md` for approximate measures |
 | Structured lookup across many patterns | The relevant `library.json` in `writing_style_ref/` or `committee_style_ref/`; avoid loading both in full for a small review |
 
-Read the starting passages of the portable guide specified in SKILL.md before proposing wording. When a row sends you to a full reference, search headings or pattern names to retrieve only the detailed entries needed. Examples of useful searches are `Qualifying a result`, `Few colons and semicolons`, `Impersonal dissertation voice`, `Contribution statements`, and `A difference that was not found`.
+Read the passages of Hang's reference specified in SKILL.md before proposing wording. When a row sends you elsewhere in the `writing-style` skill, search headings or pattern names to retrieve only the detailed entries needed. Examples of useful searches are `Qualifying a result`, `Few colons and semicolons`, `Impersonal dissertation voice`, `Contribution statements`, and `A difference that was not found`.
 
 ## Resolve conflicts by kind
 
@@ -29,7 +29,7 @@ For wording, prefer the current author's explicit choices. When reviewing Hang's
 2. A hand edit or an accepted suggestion that Hang edited (weight 4).
 3. A declined suggestion (weight 3). A note adds weight 2 to its decision.
 4. A suggestion accepted as written (weight 1).
-5. The portable summary, then field conventions and published examples.
+5. The patterns of Hang's reference, then published examples, including the committee dissertations.
 
 Delegated or inferred decisions have weight 0 and are not evidence of Hang's preference. These weights describe the source library's evidence; do not compute a new numerical score for each proposed edit. A rejection establishes what was declined in that context, not a universal ban on a word. The current paper's explicit decisions take priority over a reusable pattern.
 
@@ -47,19 +47,19 @@ For another student's paper, preserve that student's definitions and established
 - Give a quantitative comparison its measure, baseline, and available uncertainty. Use the analysis actually reported; do not impose a significance cutoff or infer a future significant result from the guide's illustrative statistics. If inferential details are unclear, flag the missing information for the author.
 - Keep a governing condition attached to its claim and a result attached to the clause that interprets it. Sentence or paragraph length is a diagnostic, not a reason by itself to split.
 - Prefer literal relations such as `suggests`, `is associated with`, and `helps explain`. Avoid ornamental academic wording, figurative summaries, and value words without supporting results.
-- Use few colons and semicolons, and replace em dashes in new proposed prose, following the portable guide's exceptions for lists, quotations, equations, citations, and headings. Do not alter quoted source passages to enforce this preference.
-- Choose voice by genre. A conference paper can use `we` for the authors' actions; an algorithm is the subject of its computations. Hang's own dissertation uses the impersonal voice described in Hang's reference. All seventeen field dissertations measured in the field conventions use `we`, so keep a student's `we` in a paper or a thesis unless the student or the advisor asks for the impersonal voice. Slide and film patterns do not govern paper prose.
+- Use few colons and semicolons, and replace em dashes in new proposed prose, with the exceptions in Hang's reference ("Few colons and semicolons"). Leave lists, quotations, equations, citations, and headings as they are, and do not alter quoted source passages to enforce this preference.
+- Choose voice by genre. A conference paper can use `we` for the authors' actions; an algorithm is the subject of its computations. Hang's own dissertation uses the impersonal voice described in Hang's reference. All three dissertations in the committee reference use `we`, so keep a student's `we` in a paper or a thesis unless the student or the advisor asks for the impersonal voice. Slide and film patterns do not govern paper prose.
 - Treat vocabulary familiarity as evidence of Hang's usage, not of the intended reader's knowledge. Define a term when the audience needs it, even if it is marked Core or Familiar. An unlisted term is not automatically wrong.
 - Avoid adding closing links, limitations, or subsections that the author did not ask for. Propose a minimal addition when a fact or argument link needed to understand the existing work is missing. Label unresolved content as a question rather than inventing it.
 - Check earlier decisions before revisiting a sentence. Do not submit a declined edit again as a new proposal. If a new concern requires revisiting it, state the concern as a question and preserve the author's decision until they change it.
 
-Keep structural reasons tied to the advisor's guide and wording reasons tied to a named style principle. A short reference such as `Advisor guide, Introduction` or `Portable guide, Correct without rewording` is enough. Do not add evidence weights, library maintenance details, or long source quotations to each student-facing card.
+Keep structural reasons tied to the advisor's guide and wording reasons tied to a named style principle. A short reference such as `Advisor guide, Introduction` or `Writing style, Correcting a sentence without rewording it` is enough. Do not add evidence weights, library maintenance details, or long source quotations to each student-facing card.
 
 If the paper needs cuts, use the guide's sequence of content editing, cleanup, and final layout adjustments. Do not remove a result merely because it is nonsignificant or change which hypotheses appear supported. Show the exact proposed cut and its effect on the argument for the author to decide.
 
 ## Scope of the bundled sources
 
-The `writing-style-portable` skill holds the portable guide, the `writing-vocabulary` skill holds the vocabulary, and the `writing-style` skill holds `writing_style_ref/` and `committee_style_ref/`, including their evidence. They are separate skills that serve this skill and the `review-paper` skill. The portable guide is needed; the other two are optional. The review can use this guidance without access to the original dissertation project.
+The `writing-style` skill holds `writing_style_ref/` and `committee_style_ref/`, including their evidence, and the `writing-vocabulary` skill holds the vocabulary. They are separate skills that serve this skill and the `review-paper` skill. The `writing-style` skill is needed. The vocabulary is optional, and `writing-style` also uses it when it is installed. The review can use this guidance without access to the original dissertation project.
 
 The larger libraries are historical source collections. Their README files, validation reports, source records, and build scripts may refer to an earlier dissertation folder, original PDFs, or paper source files that were not provided here. Those paths are provenance, not required inputs to a paper review. Do not claim to have opened a PDF that is absent. Use the bundled excerpts and extracted texts when checking a writing pattern; request the original only when the task needs it. Do not run library rebuild, import, or extraction scripts as part of an ordinary review.
 

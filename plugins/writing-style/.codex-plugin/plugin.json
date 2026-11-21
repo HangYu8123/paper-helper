@@ -1,7 +1,7 @@
 {
   "name": "writing-style",
   "version": "2.0.0",
-  "description": "The full references behind the portable writing style guide: Hang Yu's 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, and the committee writing style reference. For disputed wording and sentences that were reviewed before.",
+  "description": "Hang Yu's writing style: 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, entered through a short quick reference, and the committee writing style reference. polish-paper and review-paper use it for the wording of every proposal and review. It uses writing-vocabulary for technical terms when that plugin is installed, and works without it.",
   "author": {
     "name": "Hang Yu",
     "url": "https://github.com/HangYu8123"
@@ -15,9 +15,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Writing Style (Full)",
-    "shortDescription": "Hang's full style reference and the committee reference",
-    "longDescription": "The full references behind the portable writing style guide: Hang Yu's 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, and the committee writing style reference. For disputed wording and sentences that were reviewed before.",
+    "displayName": "Writing Style",
+    "shortDescription": "Hang's writing style reference and the committee reference",
+    "longDescription": "Hang Yu's writing style: 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, entered through a short quick reference, and the committee writing style reference. polish-paper and review-paper use it for the wording of every proposal and review. It uses writing-vocabulary for technical terms when that plugin is installed, and works without it.",
     "developerName": "Hang Yu",
     "category": "Education & Research",
     "capabilities": [

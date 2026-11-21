@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Polish Paper",
     "shortDescription": "Advisor-guided review of a student's paper draft",
-    "longDescription": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report. It needs the writing-style-portable, html-templates and review-paper plugins from the same marketplace.",
+    "longDescription": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report. It needs the writing-style, html-templates and review-paper plugins from the same marketplace.",
     "developerName": "Hang Yu",
     "category": "Education & Research",
     "capabilities": [

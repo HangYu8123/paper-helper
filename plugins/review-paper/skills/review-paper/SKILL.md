@@ -1,6 +1,6 @@
 ---
 name: review-paper
-description: Draft or revise a peer review of any research paper in Hang's reviewing style, with an interactive review page where each point includes evidence and can be accepted, edited, or rejected. Use when asked to review, referee, critique, or assess a manuscript, draft reviewer comments, fill a venue's review form, or revise a review from saved decisions. Follow the review guidelines and the portable writing style guide, and verify any reference review against the manuscript. When asked to edit a manuscript's text instead, propose the edits on the editing page for accept or reject.
+description: Draft or revise a peer review of any research paper in Hang's reviewing style, with an interactive review page where each point includes evidence and can be accepted, edited, or rejected. Use when asked to review, referee, critique, or assess a manuscript, draft reviewer comments, fill a venue's review form, or revise a review from saved decisions. Follow the review guidelines and the writing-style skill, and verify any reference review against the manuscript. When asked to edit a manuscript's text instead, propose the edits on the editing page for accept or reject.
 ---
 
 # Paper review
@@ -13,19 +13,18 @@ Apply this workflow to the paper being reviewed. Determine its contributions, te
 
 The user's request (in Claude Code, the text after the skill's slash command) names the paper folder or manuscript. If it does not, use the paper already established in the conversation, and ask only for missing input.
 
-This skill runs in Claude Code and in Codex, as a plugin of its own (alone or through the `paper-helper` bundle), or installed on its own. `SKILL_DIR` below is the folder that holds this `SKILL.md` (in Claude Code, `${CLAUDE_SKILL_DIR}`); resolve relative paths from it.
+This skill runs in Claude Code and in Codex, as a plugin of its own or installed as a standalone skill. `SKILL_DIR` below is the folder that holds this `SKILL.md` (in Claude Code, `${CLAUDE_SKILL_DIR}`); resolve relative paths from it.
 
 It uses other skills of the same collection, shared with the `polish-paper` skill and found by name as described under "Companion skills" below.
 
 | Skill | Needed | Use |
 | --- | --- | --- |
-| `writing-style-portable` | Yes | The portable writing style guide |
+| `writing-style` | Yes | Hang's writing style reference, and the rest of its references only when needed (see step 5) |
 | `html-templates` | Yes | The review template, and the editing template for edits to a manuscript's text |
 | `find-sota-papers` | No | The literature search for the related-work check in step 3, in its light mode |
 | `writing-vocabulary` | No | The author's vocabulary, for word choice |
-| `writing-style` | No | The full style references, only when needed (see step 5) |
 
-Below, `<writing-style-portable>`, `<html-templates>`, `<find-sota-papers>`, `<writing-vocabulary>`, and `<writing-style>` stand for the folders of these skills.
+Below, `<html-templates>`, `<find-sota-papers>`, `<writing-vocabulary>`, and `<writing-style>` stand for the folders of these skills.
 
 | What | Where |
 | --- | --- |
@@ -33,7 +32,7 @@ Below, `<writing-style-portable>`, `<html-templates>`, `<find-sota-papers>`, `<w
 | Reference review, optional | Usually `<paper>/review.pdf`, or a file the user names. Treat it as a second opinion to verify against the manuscript. |
 | Review rules | [references/guideline.md](references/guideline.md), Hang's guideline for the sections, their order, and the rules for each one |
 | Past reviews, optional | `previous_reviews/previous_reviews` in the folder that holds the paper folder, or a file Hang names. They are confidential, so they are not part of this skill. |
-| Writing style | The portable guide, `<writing-style-portable>/writing-style-guide.md`. When installed, the vocabulary, `<writing-vocabulary>/vocabulary.md`, and the full references, `<writing-style>/writing_style_ref/` and `<writing-style>/committee_style_ref/`, only when needed (see step 5). |
+| Writing style | Hang's writing style reference, `<writing-style>/writing_style_ref/hangs-writing-style-reference.md`. The rest of `<writing-style>/writing_style_ref/` and `<writing-style>/committee_style_ref/` only when needed (see step 5). When installed, the vocabulary, `<writing-vocabulary>/vocabulary.md`. |
 | Review template | `<html-templates>/review_template/`. Its `review.html` header comment (lines 1 to 116) is the specification of `review-data.js`. |
 | Editing template | `<html-templates>/edit_template/`. Used only for edits to a manuscript's text (see "Edits to a manuscript's text"). |
 | Checker and format example | `SKILL_DIR/review-tools/check_review.js` and [review-data-format.md](review-tools/review-data-format.md), in this skill |
@@ -144,10 +143,10 @@ List each of its points and decide whether it holds, partly holds, or does not h
 
 - [references/guideline.md](references/guideline.md) in full. It sets the sections, their order, and the rules for each one. Its `@` names refer to the files in the table under "Using this skill".
 - Hang's past reviews in full, when they are available (see the table under "Using this skill"). They show Hang's voice and the recommendation template. Without them, use the recommendation form in [references/review-voice.md](references/review-voice.md).
-- The portable writing style guide, `<writing-style-portable>/writing-style-guide.md`, starting with Core philosophy, Which guidance wins, and Quick reference, then the sections on claims, sentence style, and editing. When the `writing-vocabulary` skill is installed, read its `vocabulary.md` first and use it for word choice; without it, choose terms as the guide's introduction says. Consult `<writing-style-portable>/field-conventions.md` only when useful for the document being reviewed; dissertation structure and casual slide language do not set the style of a peer review.
+- Hang's writing style reference, `<writing-style>/writing_style_ref/hangs-writing-style-reference.md`: its opening through the Quick reference, then the patterns under Wording preference, Sentence style, and Sentence structure as they come up. When the `writing-vocabulary` skill is installed, read its `vocabulary.md` first and use it for word choice; without it, use the Vocabulary patterns of Hang's reference and the paper's own terms. Dissertation structure, the dissertation's impersonal voice, and the slide and film patterns do not set the style of a peer review.
 - [references/review-voice.md](references/review-voice.md), which distills Hang's reviewing voice and the sentence rules from the style reference that apply to reviews.
 
-The portable guide and the review voice cover ordinary reviews. The full references, in the `writing-style` skill, are large source libraries; when that skill is installed, open them only when Hang disputes a wording choice, when the portable guide states a rule without the case at hand, or when Hang asks. Then search Hang's full reference, `<writing-style>/writing_style_ref/hangs-writing-style-reference.md`, or the committee reference, `<writing-style>/committee_style_ref/committee-writing-style-reference.md`, for conventions of published writing, by heading or pattern name, and read only the entries needed. Without that skill, follow the portable guide and the review voice. Hang's current instructions and the portable guide take precedence over older examples that are casual, verbose, or heavily first person. Use "the authors", the method, or the results as the subject by default. Keep first person for a personal concern, a recommendation, or the requested expertise caveat.
+The Quick reference and the review voice cover ordinary reviews. The rest of the `writing-style` skill is a large source library; open its evidence and review records, or the committee reference, `<writing-style>/committee_style_ref/committee-writing-style-reference.md`, for conventions of published writing, only when Hang disputes a wording choice, when a pattern states a rule without the case at hand, or when Hang asks. Search by heading or pattern name, and read only the entries needed. Hang's current instructions and Hang's reference take precedence over older examples that are casual, verbose, or heavily first person. Use "the authors", the method, or the results as the subject by default. Keep first person for a personal concern, a recommendation, or the requested expertise caveat.
 
 ### 6. Draft the five sections
 
@@ -233,7 +232,7 @@ The page's "Save decisions" button writes `<review_id>.decisions.<timestamp>.jso
 - Read all relevant saved batches in time order, with later decisions taking precedence. Hang's edited wording carries more weight than an acceptance without edits. Do not infer pending decisions unless Hang asks; when asked, record inferred decisions separately from explicit choices and explain the basis. Preserve claims, data, citations, and terms, make each change as narrow as possible, and do not propose a rejected change again without addressing the rejection.
 - Keep the ids of unchanged items. The page drops a saved decision only when the text or evidence under it changes, so unchanged points keep their decisions.
 - Update `generated`, rerun the checker, and summarize what changed.
-- Hang's edits and rejections are the strongest evidence of the reviewing style. If Hang wants them kept, offer to move a decisions file that went to Downloads into the review folder and run `python <writing-style>/writing_style_ref/tools/import_review.py <paper>/review`, and ask before running it, since it changes the shared style reference. This needs the `writing-style` skill. An installed copy is replaced on the next install or plugin update, so run it on the repository's copy (`plugins/writing-style/skills/writing-style/`) and update the installation.
+- Hang's edits and rejections are the strongest evidence of the reviewing style. If Hang wants them kept, offer to move a decisions file that went to Downloads into the review folder and run `python <writing-style>/writing_style_ref/tools/import_review.py <paper>/review`, and ask before running it, since it changes the shared style reference. An installed copy is replaced on the next install or plugin update, so run it on the repository's copy (`plugins/writing-style/skills/writing-style/`) and update the installation.
 
 ## Edits to a manuscript's text
 
@@ -241,6 +240,6 @@ When Hang asks for edits to a document whose source you have, rather than a revi
 
 1. Read `<edit-template>/README.md`. It specifies `items.txt`, the page, the decision batches, and the apply step. Its scripts run on Python 3.8 or newer.
 2. Create a review folder inside the document's root folder, such as `<root>/waiting_for_review/<name>/`. Record Hang's request word for word as `@request R1`. Give each edit an `@item` with `type:`, `file:` relative to the root, a `note:` with the reason and the style principle it follows, and `--- original` copied exactly from the source with its `--- revised`. Add `markers: no` under `@review` unless the document defines the `\hang` macro and Hang wants the changes tagged.
-3. Word the edits with the portable writing style guide, especially "7. Editing someone else's text": correct without rewording, keep a correction separate from optional rewording, and check earlier decisions before proposing a change again.
+3. Word the edits with Hang's writing style reference, especially "Correcting a sentence without rewording it" and "Adding sentences that were not asked for": correct without rewording, keep a correction separate from optional rewording, and check earlier decisions before proposing a change again.
 4. Build with `python <edit-template>/build_review.py <root>/waiting_for_review/<name> --root <root>`, fix any passage reported as missing or not unique, and open `review.html` for Hang.
 5. After Hang saves a batch, run `python <edit-template>/apply_decisions.py <root>/waiting_for_review/<name> --root <root>` as a dry run, and run it with `--write` when Hang confirms. Only accepted items are applied, with Hang's wording where it was edited.

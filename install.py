@@ -36,22 +36,22 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
 PLUGINS = REPO / "plugins"
-SKILLS = ["polish-paper", "review-paper", "find-sota-papers", "writing-style-portable", "writing-vocabulary",
-          "writing-style", "html-templates"]
+SKILLS = ["polish-paper", "review-paper", "find-sota-papers", "writing-style", "writing-vocabulary",
+          "html-templates"]
 REVIEW_SKILLS = ["polish-paper", "review-paper"]  # each carries its own copy of review-tools/
 # The skills each one can use when they are installed, without needing them. What a skill needs is read from
 # the dependencies in its plugin.json (see needs()).
 CAN_USE = {
-    "polish-paper": ["find-sota-papers", "writing-vocabulary", "writing-style"],
-    "review-paper": ["find-sota-papers", "writing-vocabulary", "writing-style"],
-    "writing-style-portable": ["writing-vocabulary", "writing-style"],
-    "writing-vocabulary": ["writing-style-portable"],
-    "writing-style": ["writing-style-portable", "writing-vocabulary"],
+    "polish-paper": ["find-sota-papers", "writing-vocabulary"],
+    "review-paper": ["find-sota-papers", "writing-vocabulary"],
+    "writing-style": ["writing-vocabulary"],
+    "writing-vocabulary": ["writing-style"],
 }
 # Folders of earlier versions, each removed when every skill that replaced it is installed or uninstalled.
 LEGACY = {
     "paper-review-shared": set(REVIEW_SKILLS),  # the old shared folder, now split into the skills they use
     "advisor-review-paper": {"polish-paper"},  # the old name of polish-paper
+    "writing-style-portable": {"writing-style"},  # the compact guide, removed; writing-style took its place
 }
 MARKER = ".installed-by-paper-helper.json"
 # Marker names written by earlier versions of this script, before the repository was renamed to paper-helper.

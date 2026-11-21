@@ -2,7 +2,7 @@
 
 Words and terms for writing about robot learning from human input and human-robot interaction. Part 1 is the author's own vocabulary, taken from six published papers and their drafts (about 54,000 words), with an estimate of how familiar each term is to the author. Part 2 is the vocabulary of five robotics and HRI dissertations (about 245,000 words), which shows what expert readers in the field know without a definition, and of twelve recent dissertations from the same labs and their neighbors (about 405,000 words), whose counts describe the vocabulary observed in those dissertations. Part 3 lists words the author uses more often than field writers. Part 4 lists acronyms. Counts, examples, and sources were removed to keep the file small. The full technical vocabulary in [vocabulary_ref/](vocabulary_ref/README.md) keeps them.
 
-Use the writing style guide, `writing-style-guide.md` in the writing-style-portable skill, for how to use the words. Its Words to avoid section lists the common academic words that read as AI-drafted and the phrases the author replaced in review, since those are rules of style rather than vocabulary. A term the author writes routinely needs no explanation. A term the author has only read or seen in a title needs a definition on first use, or a check that its field meaning fits.
+Use the `writing-style` skill for how to use the words. The common academic words that read as AI-drafted and the phrases the author replaced in review are rules of style rather than vocabulary, so they are not listed here. A term the author writes routinely needs no explanation. A term the author has only read or seen in a title needs a definition on first use, or a check that its field meaning fits.
 
 ## How familiarity is marked
 

@@ -5,26 +5,9 @@
     "url": "https://github.com/HangYu8123"
   },
   "metadata": {
-    "description": "Skills for reviewing, writing, and finding research papers, for advisors, students, and peer reviewers. Install the whole collection or any skill on its own."
+    "description": "Skills for reviewing, writing, and finding research papers, for advisors, students, and peer reviewers. Install any skill on its own; each brings the skills it needs."
   },
   "plugins": [
-    {
-      "name": "paper-helper",
-      "source": "./plugins/paper-helper",
-      "description": "The whole collection in one install: polish-paper, review-paper, find-sota-papers, writing-style-portable, writing-vocabulary, writing-style, and html-templates, each installed as its own plugin.",
-      "version": "2.0.0",
-      "category": "productivity",
-      "keywords": [
-        "paper review",
-        "peer review",
-        "academic writing",
-        "literature search",
-        "HRI",
-        "robotics",
-        "LaTeX",
-        "writing style"
-      ]
-    },
     {
       "name": "polish-paper",
       "source": "./plugins/polish-paper",
@@ -71,20 +54,6 @@
       ]
     },
     {
-      "name": "writing-style-portable",
-      "source": "./plugins/writing-style-portable",
-      "description": "Compact guide to Hang Yu's academic writing style: the core philosophy, which guidance wins, rules for claims, sentences, and structure, editing someone else's text, words and phrases to avoid, and the conventions of field dissertations. Reads the writing-vocabulary skill first when it is installed, and works without it.",
-      "version": "2.0.0",
-      "category": "productivity",
-      "keywords": [
-        "academic writing",
-        "writing style",
-        "editing",
-        "HRI",
-        "robotics"
-      ]
-    },
-    {
       "name": "writing-vocabulary",
       "source": "./plugins/writing-vocabulary",
       "description": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
@@ -101,7 +70,7 @@
     {
       "name": "writing-style",
       "source": "./plugins/writing-style",
-      "description": "The full references behind the portable writing style guide: Hang Yu's 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, and the committee writing style reference. For disputed wording and sentences that were reviewed before.",
+      "description": "Hang Yu's writing style: 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, entered through a short quick reference, and the committee writing style reference. polish-paper and review-paper use it for the wording of every proposal and review. It uses writing-vocabulary for technical terms when that plugin is installed, and works without it.",
       "version": "2.0.0",
       "category": "productivity",
       "keywords": [
