@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build output
+dist/
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Claude Code per-user settings
+.claude/settings.local.json
+
+# Local working folders (kept on disk, not in the repo)
+/tmp/
+/validation_set/
+/waiting_for_review/
+/dissertation_reference/
+/figure_pages/
+/test-run-research-statement/
+/tests/
+/evals/
+
+# Paper searches run from this folder (find-sota-papers result files and their ratings)
+/results/
+/evaluations/
+
+# Local notes
+/developing_notes.txt

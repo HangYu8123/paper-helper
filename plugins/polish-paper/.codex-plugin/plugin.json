@@ -1,0 +1,39 @@
+{
+  "name": "polish-paper",
+  "version": "2.0.0",
+  "description": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "paper review",
+    "advisor",
+    "academic writing",
+    "LaTeX",
+    "HRI",
+    "robotics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Polish Paper",
+    "shortDescription": "Advisor-guided review of a student's paper draft",
+    "longDescription": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report. It needs the writing-style-portable, html-templates and review-paper plugins from the same marketplace.",
+    "developerName": "Hang Yu",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/HangYu8123/paper-helper",
+    "brandColor": "#234E70",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Use $polish-paper to review this draft with the advisor guide, proposing small revisions with reasons on the editing page for me to accept, reject, or edit."
+    ]
+  }
+}

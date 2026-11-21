@@ -1,0 +1,23 @@
+# Hang's writing style reference
+
+Start with [Hang's writing style reference](hangs-writing-style-reference.md). It holds 72 patterns across vocabulary, wording preference, writing style, sentence style, sentence structure, storytelling style, and talk and film text. 59 of them combine the two writing style libraries built from the papers, and 13 come from evidence from Hang. The opening quick reference is useful before drafting. The detailed entries provide forms, meaning boundaries, weighted evidence from Hang, and paper examples.
+
+| File | Use |
+| --- | --- |
+| [hangs-writing-style-reference.md](hangs-writing-style-reference.md) | The complete writing reference and quick reference |
+| [preference-signals.md](preference-signals.md) | Every instruction, hand edit, decline, edit, and note from Hang, with its weight, and the patterns ranked by weight |
+| [review-decisions.md](review-decisions.md) | The index of the 16 imported reviews, with the record of each in `reviews/` |
+| [source-evidence.md](source-evidence.md) | All retained paper excerpts, grouped by merged pattern |
+| [source-map.md](source-map.md) | How all 96 original entries were combined, how differences were resolved, and what the evidence from Hang changed |
+| [library.json](library.json) | The merged guidance, evidence, and weights in a structured format |
+| [validation.md](validation.md) | Coverage, quotation, evidence wording, link, and preservation checks |
+
+Use the guide for new dissertation prose while preserving the current passage's facts and definitions. Paper quotations illustrate wording and do not supply facts for a different study. Evidence from Hang takes priority over the paper examples, heavier evidence over lighter, and the impersonal dissertation voice takes priority over first-person source examples in the chapters.
+
+Prepared on October 12, 2026 from the two libraries that were then in `waiting_for_review`. Revised the same day from the decisions of the Chapter 8 writing review and from Hang's request to use fewer colons and semicolons. The technical vocabulary was added on October 17, 2026 from a scan of the papers in `reference_papers/` (CHARM, Demonstration Sidetracks, PHIRL, Progress, the prospectus, and STEADY), and expanded the same day with the three committee dissertations in `dessertation_reference/`, which are counted separately and never raise a familiarity tier. Revised on October 19, 2026 from 679 decisions in 16 reviews of the dissertation, the talk, and the film (496 of them by Hang), from 19 instructions in Hang's messages, and from 18 of Hang's hand edits, with more weight on declines, notes, and edits. The technical vocabulary was expanded on November 8, 2026 with 12 recent dissertations from the labs of Matarić, Song, Li, Writer B, and Scassellati, kept with their extracted text in the plugin repository's `dissertation_reference/`. This added 171 terms, two groups (Simulation, vision, and generative models; Application areas and populations), and 22 acronyms. On November 20, 2026 the technical vocabulary and its tools moved to their own skill, writing-vocabulary, so that the style reference and the vocabulary can be installed separately.
+
+To rebuild after editing the guidance in `tools/authored_entries.py`, run `python writing_style_ref/tools/build_reference.py` from the dissertation folder. Then run `python writing_style_ref/tools/validate_reference.py`.
+
+To bring in a later review, run `python writing_style_ref/tools/import_review.py <review folder>` before the review folder is removed. The folder can be in `waiting_for_review/` or in the talk's `wait_to_review/` (`../dissertation_presentation/wait_to_review/<folder>`). Add `--prefix X-` when the review's item ids repeat those of an imported review. Then cite its decisions in `tools/authored_entries.py`, or list a strong decision in `UNCITED` with its reason, and rebuild. The build stops when a decline, edit, or note is neither cited nor explained. The build and the validation also read `sources/` (the preserved original entries, library snapshots, review decisions, Hang's instructions and hand edits, and the text of the committee dissertations). That folder is not in the repository, so they run only where it is kept. Hang's instructions and hand edits are snapshots in `sources/hang-instructions.json` and `sources/hand-edits.json`, made by `tools/collect_hang_evidence.py`. Add a new instruction or hand edit there and rerun it before citing it.
+
+The technical vocabulary, its checker, and its build tools are in the writing-vocabulary skill. Its `vocabulary_ref/README.md` gives the steps to check a draft and to rebuild the vocabulary.

@@ -1,0 +1,85 @@
+# Multi-agent orchestration contracts
+
+Read this file before creating discovery or validation workers. The main agent
+owns constraints, coverage, deduplication, conflict resolution, ranking, and the
+only final report.
+
+## Preference and recovery
+
+- `no`: create no workers; run every lane sequentially.
+- `auto`: use workers only when the host provides them and at least two
+  independent lanes are useful.
+- `yes`: attempt bounded parallel work; if unavailable, state the fallback once
+  and run the same lanes sequentially.
+
+Use normally 2–4 independent lanes. Wait at discovery and validation barriers.
+If a worker is missing, shallow, or failed, rerun only its assignment
+sequentially. Inline roleplay is not parallel work.
+
+## Discovery worker contract
+
+Give every worker normalized constraints, one distinct objective, source
+priorities, target count, explicit query/fetch/time budget, saturation rule, and
+the search requirements from `references/search-depth.md` — including the
+**mandatory snowball floor**: expand the lane's strongest candidates through
+backward references and forward citations, not keyword queries alone.
+
+One lane is one row of the discovery manifest, so each worker owns exactly one
+lane and reports the numbers that fill that row. Require live search and fetch; a
+worker without them returns an empty ledger and the reason.
+
+Workers return compact rows, not prose:
+
+```text
+lane_id | queries_and_sources_checked | candidate_id | title | authors | venue |
+date | canonical_url | citation_count | citation_source |
+citation_evidence_url | sota_evidence_urls | content_evidence_urls | intuition |
+contribution | setup | results_vs_baselines | from_snowball(yes|no) |
+relevance_note | unresolved_conflicts
+```
+
+plus **one lane-summary line** the main agent copies into the discovery manifest:
+
+```text
+lane_id | seed_queries | raw_hits | curated_candidates | snowball_added
+```
+
+`raw_hits` is the pre-dedup count the lane's queries returned; `curated_candidates`
+is the rows it kept; `snowball_added` is how many of those arrived via citation/
+reference expansion (`from_snowball = yes`). Use a versionless arXiv ID, lowercase
+DOI, or normalized-title fallback as `candidate_id`. A factual field without a
+fetched evidence URL is `unknown`. Workers do not rank globally or write
+user-facing lists.
+
+## Validation worker contract
+
+The main agent assigns every provisionally retained candidate:
+
+1. canonical identity plus title/author match;
+2. bibliographic metadata and a citation count from a citation-bearing source;
+3. SOTA, benchmark, setup, baseline, and result claims from the paper or an
+   official project/venue/benchmark page;
+4. affiliation retrieval only when `institutions == reputable`.
+
+Each verdict must name the fetched URL for every completed check. Return:
+
+```text
+assignment_id | candidate_id | checks_completed | canonical_evidence_url |
+citation_count_and_source | citation_evidence_url | sota_evidence_urls |
+content_evidence_urls | affiliations_found | affiliation_evidence_url |
+verdict(LIVE|DROP|CONFLICT) | reason
+```
+
+Source failures produce `CONFLICT`, never a familiarity-based verdict. Re-fetch
+when sources disagree; otherwise retain `unknown` and drop a paper only when a
+required identity, hard threshold, or SOTA claim cannot be established.
+
+When a check is blocked by a paywall, login, or purchase prompt, apply the
+locked-resource step in `references/sources.md` (legitimate open-access copies
+only) before recording the check as failed. Name the URL actually read, not the
+locked one, and never treat a paywall alone as a verified fact.
+
+Before ranking, compare returned IDs and evidence fields against the coverage
+manifest and finish missing checks sequentially. A wholly incomplete lane makes
+the search blocked/incomplete; one candidate with failed mandatory validation is
+`DROP` with a concrete reason.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Polish Paper"
+  short_description: "Advisor-guided review of a student's paper draft"
+  default_prompt: "Use $polish-paper to review this draft with the advisor guide, proposing small revisions with reasons on the editing page for me to accept, reject, or edit."

@@ -1,0 +1,37 @@
+{
+  "name": "writing-style-portable",
+  "version": "2.0.0",
+  "description": "Compact guide to Hang Yu's academic writing style: the core philosophy, which guidance wins, rules for claims, sentences, and structure, editing someone else's text, words and phrases to avoid, and the conventions of field dissertations. Reads the writing-vocabulary skill first when it is installed, and works without it.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "academic writing",
+    "writing style",
+    "editing",
+    "HRI",
+    "robotics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Writing Style (Portable)",
+    "shortDescription": "Hang's guide to academic writing and revision",
+    "longDescription": "Compact guide to Hang Yu's academic writing style: the core philosophy, which guidance wins, rules for claims, sentences, and structure, editing someone else's text, words and phrases to avoid, and the conventions of field dissertations. Reads the writing-vocabulary skill first when it is installed, and works without it.",
+    "developerName": "Hang Yu",
+    "category": "Education & Research",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/HangYu8123/paper-helper",
+    "brandColor": "#234E70",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Use $writing-style-portable to revise this passage in Hang's writing style, keeping my wording where it works and giving a reason for each change."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Vocabulary"
+  short_description: "Hang's technical vocabulary and checker"
+  default_prompt: "Use $writing-vocabulary to check which technical terms in this draft Hang has not used before and which need a definition."

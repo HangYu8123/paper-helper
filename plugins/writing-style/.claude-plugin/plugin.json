@@ -1,0 +1,16 @@
+{
+  "name": "writing-style",
+  "version": "2.0.0",
+  "description": "The full references behind the portable writing style guide: Hang Yu's 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, and the committee writing style reference. For disputed wording and sentences that were reviewed before.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "writing style",
+    "style reference",
+    "academic writing"
+  ]
+}

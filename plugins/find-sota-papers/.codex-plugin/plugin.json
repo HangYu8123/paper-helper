@@ -1,0 +1,42 @@
+{
+  "name": "find-sota-papers",
+  "version": "2.0.0",
+  "description": "Finds and verifies current research papers under explicit constraints (topic, benchmark, date, citations, well-known institutions, count, layout), with a working link and evidence links for every paper and no paper listed from memory. You choose the settings when you use it directly; polish-paper and review-paper call it in a light, automatic mode for related-work, novelty, baseline, and citation checks.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "literature search",
+    "research papers",
+    "state of the art",
+    "related work",
+    "citations",
+    "HRI",
+    "robotics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Find SOTA Papers",
+    "shortDescription": "Find and verify current research papers",
+    "longDescription": "Finds and verifies current research papers under explicit constraints (topic, benchmark, date, citations, well-known institutions, count, layout), with a working link and evidence links for every paper and no paper listed from memory. You choose the settings when you use it directly; polish-paper and review-paper call it in a light, automatic mode for related-work, novelty, baseline, and citation checks. It needs live web search and page fetch.",
+    "developerName": "Hang Yu",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write",
+      "Web search",
+      "Web fetch"
+    ],
+    "websiteURL": "https://github.com/HangYu8123/paper-helper",
+    "brandColor": "#234E70",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Use $find-sota-papers to find and verify the current state-of-the-art papers on my research topic."
+    ]
+  }
+}

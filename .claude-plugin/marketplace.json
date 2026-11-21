@@ -1,0 +1,127 @@
+{
+  "name": "paper-helper",
+  "owner": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "metadata": {
+    "description": "Skills for reviewing, writing, and finding research papers, for advisors, students, and peer reviewers. Install the whole collection or any skill on its own."
+  },
+  "plugins": [
+    {
+      "name": "paper-helper",
+      "source": "./plugins/paper-helper",
+      "description": "The whole collection in one install: polish-paper, review-paper, find-sota-papers, writing-style-portable, writing-vocabulary, writing-style, and html-templates, each installed as its own plugin.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "paper review",
+        "peer review",
+        "academic writing",
+        "literature search",
+        "HRI",
+        "robotics",
+        "LaTeX",
+        "writing style"
+      ]
+    },
+    {
+      "name": "polish-paper",
+      "source": "./plugins/polish-paper",
+      "description": "Advisor-guided review of a student's paper draft. Checks the argument, sections, paragraphs, figures, and length against an advisor's paper-writing guide, and proposes small revisions with reasons on an editing page, where the author accepts, rejects, or edits each one before it reaches the source. Can also write a mock reviewer report.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "paper review",
+        "advisor",
+        "academic writing",
+        "LaTeX",
+        "HRI",
+        "robotics"
+      ]
+    },
+    {
+      "name": "review-paper",
+      "source": "./plugins/review-paper",
+      "description": "Peer reviews of others' papers in Hang Yu's reviewing style, on a review page with the evidence under each point and buttons to accept, edit, or reject it. Also proposes edits to a manuscript's text on the editing page when asked.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "peer review",
+        "referee report",
+        "academic writing",
+        "HRI",
+        "robotics"
+      ]
+    },
+    {
+      "name": "find-sota-papers",
+      "source": "./plugins/find-sota-papers",
+      "description": "Finds and verifies current research papers under explicit constraints (topic, benchmark, date, citations, well-known institutions, count, layout), with a working link and evidence links for every paper and no paper listed from memory. You choose the settings when you use it directly; polish-paper and review-paper call it in a light, automatic mode for related-work, novelty, baseline, and citation checks.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "literature search",
+        "research papers",
+        "state of the art",
+        "related work",
+        "citations",
+        "HRI",
+        "robotics"
+      ]
+    },
+    {
+      "name": "writing-style-portable",
+      "source": "./plugins/writing-style-portable",
+      "description": "Compact guide to Hang Yu's academic writing style: the core philosophy, which guidance wins, rules for claims, sentences, and structure, editing someone else's text, words and phrases to avoid, and the conventions of field dissertations. Reads the writing-vocabulary skill first when it is installed, and works without it.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "academic writing",
+        "writing style",
+        "editing",
+        "HRI",
+        "robotics"
+      ]
+    },
+    {
+      "name": "writing-vocabulary",
+      "source": "./plugins/writing-vocabulary",
+      "description": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "vocabulary",
+        "terminology",
+        "academic writing",
+        "HRI",
+        "robotics"
+      ]
+    },
+    {
+      "name": "writing-style",
+      "source": "./plugins/writing-style",
+      "description": "The full references behind the portable writing style guide: Hang Yu's 72 writing patterns with weighted evidence from instructions, hand edits, and 16 review records, and the committee writing style reference. For disputed wording and sentences that were reviewed before.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "writing style",
+        "style reference",
+        "academic writing"
+      ]
+    },
+    {
+      "name": "html-templates",
+      "source": "./plugins/html-templates",
+      "description": "Two HTML page templates for accept-or-reject review workflows: an editing page whose accepted edits are applied to LaTeX sources after a dry run, and a review page with the evidence under each point of a peer review.",
+      "version": "2.0.0",
+      "category": "productivity",
+      "keywords": [
+        "review page",
+        "editing",
+        "LaTeX",
+        "templates"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "writing-vocabulary",
+  "version": "2.0.0",
+  "description": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "vocabulary",
+    "terminology",
+    "academic writing",
+    "HRI",
+    "robotics"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Writing Vocabulary",
+    "shortDescription": "Hang's technical vocabulary and checker",
+    "longDescription": "Hang Yu's vocabulary for writing about robot learning and human-robot interaction: terms with fixed meanings, terms marked by how familiar they are to the author, the vocabulary of field dissertations, and acronyms, with the full 1,100-term technical vocabulary and a checker that sorts a draft's words by familiarity.",
+    "developerName": "Hang Yu",
+    "category": "Education & Research",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/HangYu8123/paper-helper",
+    "brandColor": "#234E70",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Use $writing-vocabulary to check which technical terms in this draft Hang has not used before and which need a definition."
+    ]
+  }
+}

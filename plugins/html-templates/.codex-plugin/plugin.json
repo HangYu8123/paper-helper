@@ -1,0 +1,37 @@
+{
+  "name": "html-templates",
+  "version": "2.0.0",
+  "description": "Two HTML page templates for accept-or-reject review workflows: an editing page whose accepted edits are applied to LaTeX sources after a dry run, and a review page with the evidence under each point of a peer review.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "review page",
+    "editing",
+    "LaTeX",
+    "templates"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "HTML Templates",
+    "shortDescription": "Accept-or-reject pages for proposed edits and reviews",
+    "longDescription": "Two HTML page templates for accept-or-reject review workflows: an editing page whose accepted edits are applied to LaTeX sources after a dry run, and a review page with the evidence under each point of a peer review.",
+    "developerName": "Hang Yu",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/HangYu8123/paper-helper",
+    "brandColor": "#234E70",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Use $html-templates to put these proposed edits on an editing page so I can accept, reject, or reword each one before it is applied."
+    ]
+  }
+}

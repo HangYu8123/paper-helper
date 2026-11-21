@@ -1,0 +1,17 @@
+{
+  "name": "html-templates",
+  "version": "2.0.0",
+  "description": "Two HTML page templates for accept-or-reject review workflows: an editing page whose accepted edits are applied to LaTeX sources after a dry run, and a review page with the evidence under each point of a peer review.",
+  "author": {
+    "name": "Hang Yu",
+    "url": "https://github.com/HangYu8123"
+  },
+  "homepage": "https://github.com/HangYu8123/paper-helper",
+  "repository": "https://github.com/HangYu8123/paper-helper",
+  "keywords": [
+    "review page",
+    "editing",
+    "LaTeX",
+    "templates"
+  ]
+}
